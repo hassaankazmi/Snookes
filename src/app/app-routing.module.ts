@@ -10,6 +10,11 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'login', // Redirect to the 'login' route when the path is empty
+        pathMatch: 'full', // Use 'full' to ensure a complete match of the path
+      },
+      {
         path:'login', component: LoginComponent
       },
       {
